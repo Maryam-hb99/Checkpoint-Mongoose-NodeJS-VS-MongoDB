@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>People's Database</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+  <div class="container mx-auto mt-12 p-4">
+    <h1 class="text-5xl font-semibold text-center text-blue-800 mb-8">People's Database</h1>
+    <div class="max-w-lg mx-auto p-6 bg-white shadow-xl rounded-lg border border-gray-200">
+      <form id="personForm" class="space-y-6">
+        <div>
+          <label for="name" class="block text-lg font-medium text-gray-700">Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+            class="mt-2 p-3 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+        <div>
+          <label for="age" class="block text-lg font-medium text-gray-700">Age</label>
+          <input
+            type="number"
+            id="age"
+            placeholder="Enter your age"
+            class="mt-2 p-3 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+        <div>
+          <label for="foods" class="block text-lg font-medium text-gray-700">Favorite Foods</label>
+          <input
+            type="text"
+            id="foods"
+            placeholder="Enter favorite foods (comma-separated)"
+            class="mt-2 p-3 w-full border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full py-3 mt-4 bg-blue-600 text-white rounded-md shadow-md hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+        >
+          Add Person
+        </button>
+      </form>
+      <div id="result" class="mt-5"></div>
+    </div>
+  </div>
+
+  <div id="personsList" class="mt-12 p-4 max-w-4xl mx-auto">
+    <h2 class="text-3xl font-semibold text-blue-800 mb-4">All Persons</h2>
+    <ul id="persons" class="space-y-6">
+      <!-- List of persons will be rendered here -->
+    </ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
